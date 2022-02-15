@@ -1,14 +1,42 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <!-- <input type="text" v-model="name"> -->
     <router-view />
   </div>
 </template>
+<script>
+
+export default {
+  data(){
+    return {
+      name:"Test",
+      student:[]
+    }
+  },
+  created(){
+    this.$store.state.name="Changed"
+    console.log(this.$store.state.name);
+    this.sayHello()
+  },
+  methods:{
+    sayHello(){
+      console.log("object: ", this.name);
+    }
+  },
+  watch:{
+    name:function (val, lastValue) {
+      this.sayHello()
+      console.log('new value: ', val);
+      console.log('last value: ', lastValue);
+    },
+  }
+}
+</script>
+
 
 <style>
+
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
