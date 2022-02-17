@@ -1,8 +1,8 @@
 <template>
     <div class="main  flex justify-between py-3 bg-white  px-3 h-400  items-center max-w-7xl mx-auto text-center">
          <div class="logoContainer  text-2xl ">
-             <img class="logo inline-block w-12 h-12 rounded-full" src="https://assets.foodora.com/c1d829a/img/favicon/foodpanda/apple-touch-icon-114x114.png?c1d829a" alt="">
-             <span style="font-weight:500">
+             <img class="logo inline-block w-11 h-11 rounded-full" src="https://assets.foodora.com/c1d829a/img/favicon/foodpanda/apple-touch-icon-114x114.png?c1d829a" alt="">
+             <span style="font-weight:600;color:#D70F64">
                  foodpanda
              </span>
          </div>
@@ -44,7 +44,7 @@
              <div class="divider"></div>
              <div class="eachNavContainer">
                  <div class="basketContainer text-2xl cursor-pointer">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i style="color:#D70F64;" class="fa-solid fa-cart-shopping"></i>
                  </div>
              </div>
          </div>
@@ -73,6 +73,7 @@ export default {
     position:relative;
 }
 .links {
+    z-index: 9999;
     position:absolute;
     background:white;
     left: -1.5rem;
@@ -94,6 +95,7 @@ export default {
 }
 .main {
     color:#5F5F5F;
+    z-index: 999;
 }
 .navigationSection {
     width: 30%;
