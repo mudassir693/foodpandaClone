@@ -1,5 +1,6 @@
 <template>
-    <div class="main  flex justify-between py-3 bg-white  px-3 h-400  items-center max-w-7xl mx-auto text-center">
+<div class="main">
+    <div class="container flex justify-between py-3 bg-white  px-3 h-400  items-center max-w-7xl mx-auto text-center">
          <div class="logoContainer  text-2xl ">
              <img class="logo inline-block w-11 h-11 rounded-full" src="https://assets.foodora.com/c1d829a/img/favicon/foodpanda/apple-touch-icon-114x114.png?c1d829a" alt="">
              <span style="font-weight:600;color:#D70F64">
@@ -49,6 +50,7 @@
              </div>
          </div>
     </div>
+</div>
 </template>
 
 <script>
@@ -69,6 +71,9 @@ export default {
 </script>
 
 <style scoped>
+.container {
+    max-height: 65px;
+}
 .navSection {
     position:relative;
 }
@@ -96,6 +101,11 @@ export default {
 .main {
     color:#5F5F5F;
     z-index: 999;
+    position: absolute;
+    top: 0;
+    height: 65px;
+    background:white;
+    width: 100%;
 }
 .navigationSection {
     width: 30%;

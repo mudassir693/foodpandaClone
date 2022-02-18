@@ -1,7 +1,12 @@
 <template >
     <div>
-       <div class="main">
-           Haider Banner
+       <div class="main max-w-7xl mx-auto text-left flex items-center">
+           <div class="mainHeader">
+               Partners
+           </div>
+           <div class="desc my-2">
+               You prepare the food, we handle the rest
+           </div>
         </div> 
     </div>
 </template>
@@ -10,6 +15,23 @@ export default {
     
 }
 </script>
-<style >
-    
+<style scoped>
+ .main {
+     position: relative;
+     /* height: 20vh; */
+     /* overflow-x: hidden */
+ }   
+ .mainHeader {
+     position: absolute;
+    font-size: 10rem;
+    font-weight: 900;
+    color: lightgray;
+ }
+ .desc {
+     position: absolute;
+     bottom: -3.5rem; 
+     font-size: 1.7rem;
+     color: #333333;
+     font-weight: 100;
+ }
 </style>
