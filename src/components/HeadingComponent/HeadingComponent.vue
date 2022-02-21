@@ -17,8 +17,9 @@ export default {
 </script>
 <style scoped>
  .main {
-     position: relative;
-     /* height: 20vh; */
+     /* background: red !important; */
+     /* position: relative; */
+     height: 15vh;
      /* overflow-x: hidden */
  }   
  .mainHeader {
@@ -29,7 +30,7 @@ export default {
  }
  .desc {
      position: absolute;
-     bottom: -3.5rem; 
+     bottom: 0.25rem; 
      font-size: 1.7rem;
      color: #333333;
      font-weight: 100;
