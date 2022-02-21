@@ -1,9 +1,10 @@
 <template>
   <div class="home">
     <NavBar />
-    <FirstBanner />
-    <BannerHeader />
+    <FirstBanner  />
+    <BannerHeader Header="Partners" Desc="You prepare the food, we handle the rest" />
     <SecondBanner />
+     <BannerHeader Header="Cities" Desc="Find us in these cities and many more!" />
     <div>
     <h1>Haider is live</h1>
     </div>

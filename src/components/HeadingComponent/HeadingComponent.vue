@@ -2,24 +2,27 @@
     <div>
        <div class="main max-w-7xl mx-auto text-left flex items-center">
            <div class="mainHeader">
-               Partners
+               {{Header}}
            </div>
            <div class="desc my-2">
-               You prepare the food, we handle the rest
+               {{Desc}}
            </div>
         </div> 
     </div>
 </template>
 <script>
 export default {
+
+    props:['Header','Desc']
     
 }
 </script>
 <style scoped>
  .main {
      /* background: red !important; */
-     /* position: relative; */
-     height: 15vh;
+     position: relative;
+     /* height: 15vh; */
+     height: 100px;
      /* overflow-x: hidden */
  }   
  .mainHeader {
@@ -30,7 +33,7 @@ export default {
  }
  .desc {
      position: absolute;
-     bottom: 0.25rem; 
+     bottom: -0.38rem; 
      font-size: 1.7rem;
      color: #333333;
      font-weight: 100;

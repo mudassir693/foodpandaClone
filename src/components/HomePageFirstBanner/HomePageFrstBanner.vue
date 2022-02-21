@@ -54,6 +54,8 @@ export default ({
     position: relative;
     z-index: 1;
     overflow-x: hidden;
+    max-height: 1000px;
+
     /* background:lightgray; */
 }
 .textContainer {
@@ -88,6 +90,8 @@ export default ({
     /* z-index: 100; */
     right: -30%;
     z-index: 1!important;
+    max-height: 1000px;
+
 }
 .inputBox {
     width: 100%;

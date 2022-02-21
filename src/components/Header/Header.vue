@@ -101,7 +101,7 @@ export default {
 .main {
     color:#5F5F5F;
     z-index: 999;
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 65px;
     background:white;
