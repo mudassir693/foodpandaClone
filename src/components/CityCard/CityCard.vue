@@ -1,14 +1,14 @@
 <template >
-    <div class="main relative">
+    <div class="main relative cursor-pointer">
         <img class="img" src="https://images.deliveryhero.io/image/foodpanda/city-tile-pk/Karachi.jpg?width=400&height=400" alt="">
-        <div class="header">K</div>
+        <div class="header opacity-50 hidden ">{{CityName.charAt(0)}}</div>
         <div class="textContainer ">
             
             <div class="flex justify-between items-center flexWrapper">
                 <div class="cityname mx-5 text-white">
-                    Karachi
+                    {{CityName}}
                 </div>
-                <div class=" border border-red-500  p-3 px-4 arrowContainer">
+                <div class=" py-2 px-4 arrowContainer">
                     <i class="arrow text-light text-2xl text-white fa-solid fa-arrow-right"></i>
                 </div>
                 
@@ -18,6 +18,7 @@
 </template>
 <script>
 export default {
+    props:['CityName']
     
 }
 </script>
@@ -34,6 +35,12 @@ export default {
 }
 .main:hover .img {
     transform:scale(1.2);
+}
+.main:hover .header {
+    display:block;
+}
+.main:hover .arrowContainer {
+    visibility:visible;
 }
 .img {
     /* position: absolute;
@@ -56,22 +63,30 @@ export default {
 }
 .header {
     position: relative;
-    bottom: 100px;
-    opacity: 0.8;
+    bottom: 130px;
+    /* opacity: 0.8; */
     left: -20px;
     z-index: 1;
     font-size: 200px;
     line-height:104px;
     color: #d70f64;
     font-weight: 900;
+     transition: all 200ms ease-in-out;
 
 }
 .cityname {
-    
+    position: absolute;
+    left: -0.2rem;
+    bottom: .70rem;
 }
 .arrowContainer {
     background:#d70f64;
     border-radius: .5rem;
+     transition: all 200ms ease-in-out;
+     visibility:hidden;
+     position: absolute;
+     right: 0;
+     bottom: 0rem;
 }
 .arrow {
    
