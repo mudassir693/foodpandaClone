@@ -1,6 +1,6 @@
 <template >
-    <div class="main relative cursor-pointer">
-        <img class="img" src="https://images.deliveryhero.io/image/foodpanda/city-tile-pk/Karachi.jpg?width=400&height=400" alt="">
+    <div class="main relative cursor-pointer my-2">
+        <img class="img" :src="img" alt="">
         <div class="header opacity-50 hidden ">{{CityName.charAt(0)}}</div>
         <div class="textContainer ">
             
@@ -18,7 +18,7 @@
 </template>
 <script>
 export default {
-    props:['CityName']
+    props:['CityName','img']
     
 }
 </script>
@@ -75,9 +75,11 @@ export default {
 
 }
 .cityname {
+    font-size: 1.5rem;
     position: absolute;
     left: -0.2rem;
     bottom: .70rem;
+    font-weight: 900;
 }
 .arrowContainer {
     background:#d70f64;

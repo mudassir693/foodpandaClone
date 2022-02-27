@@ -1,5 +1,5 @@
 <template >
-    <div class="main  mx-auto bg-red-100">
+    <div :style="{'background-image':`url(${bgImage})`}" class="main  mx-auto bg-red-100">
         <div class="container max-w-7xl mx-auto">
             <div class="cardTop">
 
@@ -7,7 +7,7 @@
             <div class="card bg-white  p-5">
                 <div class="wrapper  m-3">
                 <div class="heading my-2 text-[#333333]">
-                    List your restaurant or shop on foodpanda
+                    {{heading}}
                 </div>
                 <div class="pera my-4">
                     <div class="peragraph text-[#707070] my-3">
@@ -39,6 +39,7 @@
 </template>
 <script>
 export default {
+    props:['bgImage','heading']
     
 }
 </script>
@@ -48,7 +49,7 @@ export default {
     position: relative;
     height: 70vh;
     /* z-index: 999; */
-    background-image: url('../../assets/resturant.webp');
+    /* background-image: url('../../assets/resturant.webp'); */
     background-position:center center;
     background-repeat:no-repeat;
     background-size: cover;
