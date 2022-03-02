@@ -1,7 +1,7 @@
 <template>
-    <div style="" class="main">
+    <div style="" class="main  ">
         <div style="position:relative;" class="container max-w-7xl mx-auto text-left">
-            <div  class="textSection flex  items-center flex-column  ">
+            <div  class="textSection flex items-center flex-column  ">
                 <div  class="containerWrapper">
                 <div class=" text text-5xl font-thin">
                     It's the food and groceries you love, delivered
