@@ -4,9 +4,9 @@
     <FirstBanner  />
     <BannerHeader class="hidden sm:hidden md:block" Header="Partners" Desc="You prepare the food, we handle the rest" />
     <SecondBanner heading="List your restaurant or shop on foodpanda" bgImage="https://images.deliveryhero.io/image/foodpanda/home-vendor-pk.jpg?width=1400&height=896" />
-     <BannerHeader Header="Cities" Desc="Find us in these cities and many more!" />
+     <BannerHeader class="hidden sm:hidden md:block" Header="Cities" Desc="Find us in these cities and many more!" />
      <Cities />
-     <BannerHeader Header="Office" Desc="Take your office out to lunch" />
+     <BannerHeader class="hidden sm:hidden md:block" Header="Office" Desc="Take your office out to lunch" />
      <SecondBanner heading="Foodpanda for business" bgImage="https://images.deliveryhero.io/image/foodpanda/home-corporate-pk.jpg?width=1400&height=896" />
     <div>
     <h1>Haider is live</h1>

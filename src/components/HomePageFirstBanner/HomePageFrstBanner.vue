@@ -1,12 +1,12 @@
 <template>
-    <div style="" class="main  ">
-        <div style="position:relative;" class="container max-w-7xl mx-auto text-left">
+    <div style="" class="main ">
+        <div style="position:relative;" class="container px-5 md:px-0 max-w-7xl mx-auto text-left">
             <div  class="textSection flex items-center flex-column  ">
                 <div  class="containerWrapper">
-                <div class=" text text-5xl font-thin">
+                <div class=" text w-[100%] text-2xl leding-3 md:leading-[3.5rem]  md:text-5xl font-thin">
                     It's the food and groceries you love, delivered
                 </div>
-                <div class="inputBox my-5 ">
+                <div class="inputBox hidden md:block my-0 md:my-5 ">
                     <div class="textContainer  border border-grey-500 p-5 flex">
                         <div  class="inputContainer cursor-pointer border border-grey-500  ">
                             <label for="inputFeild">
@@ -66,11 +66,11 @@ export default ({
     width: 75%;
 }
 .text {
-    width: 100%;
+    /* width: 100%; */
     z-index: 9999;
     /* font-weight: 100;
     font-size: 3rem; */
-    line-height:3.5rem;
+    /* line-height:3.5rem; */
 }
 .border {
     width: 100%;
@@ -106,6 +106,24 @@ export default ({
     background:#D70F64;
     color: white;
     font-weight: 900;
+}
+
+@media screen and (max-width: 640px) {
+ .main{
+    height: 70vh;
+ }
+ .banner {
+    /* width: ; */
+    height: 100%;
+    object-fit: contain;
+    position:absolute;
+    top: 0%;
+    /* z-index: 100; */
+    right: -71%;
+    z-index: 1!important;
+    max-height: 1000px;
+
+}
 }
 
 </style>
