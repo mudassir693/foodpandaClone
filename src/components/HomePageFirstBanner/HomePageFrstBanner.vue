@@ -2,27 +2,28 @@
     <div style="" class="main ">
         <div style="position:relative;" class="container px-5 md:px-0 max-w-7xl mx-auto text-left">
             <div  class="textSection flex items-center flex-column  ">
-                <div  class="containerWrapper">
-                <div class=" text w-[100%] text-2xl leding-3 md:leading-[3.5rem]  md:text-5xl font-thin">
+                <div  class="containerWrapper mx-3 7xl:mx-0">
+                <div class=" text w-[80%] md:w-[100%] text-2xl leding-3 md:leading-[3.5rem]  md:text-5xl font-thin">
                     It's the food and groceries you love, delivered
                 </div>
-                <div class="inputBox hidden md:block my-0 md:my-5 ">
-                    <div class="textContainer  border border-grey-500 p-5 flex">
+              <div class="inputBox  min-w-[809px]  md:block my-0 md:my-5 ">
+                    <div class="textContainer flex-col md:flex-row border bg-[transparent] md:bg-red-200 border-grey-500 p-5 flex">
                         <div  class="inputContainer cursor-pointer border border-grey-500  ">
                             <label for="inputFeild">
                             <input id="inputFeild" class="inputFeildContainer text-1xl p-4" placeholder="Enter your full address" type="text">
                             <span class="md:mx-2 lg:mx-2 cursor-pointer "><i class="navigatorIcon text-2xl fa-solid fa-location-crosshairs"></i></span>
                             </label>
                         </div>
-                        
-                        <div style="" class="btn text-1xl border border-grey-500 flex justify-center items-center mx-3 cursor-pointer">
-                            Delivery
-                        </div>
-                        <div class="or flex justify-center items-center">
-                            Or
-                        </div>
-                        <div style="" class="btn text-1xl border border-grey-500 flex justify-center items-center mx-3 cursor-pointer">
-                            Pick-Up
+                        <div class=" bannerRightContainer mt-5 md:mt-0 flex-row flex w-[40px] ">
+                            <div style="" class="btn text-1xl border border-grey-500 flex justify-center items-center mx-3 cursor-pointer">
+                                Delivery
+                            </div>
+                            <div class="or hidden md:flex justify-center items-center">
+                                Or
+                            </div>
+                            <div style="" class="btn text-1xl border border-grey-500 flex justify-center items-center mx-3 cursor-pointer">
+                                Pick-Up
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -48,7 +49,9 @@ export default ({
     border: none;
     outline: none;
 }
-
+.bannerRightContainer {
+    width: 40%;
+}
 .main{
     height: 80vh;
     position: relative;
@@ -95,6 +98,7 @@ export default ({
 }
 .inputBox {
     width: 100%;
+    min-width: 809px;
    /* width: 8rem;  */
 }
 .navigatorIcon {
@@ -102,6 +106,7 @@ export default ({
 }
 .btn {
     width: 17rem;
+    min-height: 3.5rem;
     border-radius: 0.5rem;
     background:#D70F64;
     color: white;
@@ -123,6 +128,16 @@ export default ({
     z-index: 1!important;
     max-height: 1000px;
 
+
+}
+.inputBox {
+    width: 100%;
+    min-width: 200px;
+    /* background-color:pink; */
+   /* width: 8rem;  */
+}
+.bannerRightContainer {
+    width: 100%;
 }
 }
 
