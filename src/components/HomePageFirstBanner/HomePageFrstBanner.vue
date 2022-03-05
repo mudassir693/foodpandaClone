@@ -14,7 +14,7 @@
                             <span class="md:mx-2 lg:mx-2 cursor-pointer bg-white "><i class="navigatorIcon text-2xl fa-solid fa-location-crosshairs"></i></span>
                             </label>
                         </div>
-                        <div class="bannerRightContainer mt-5 md:mt-0 flex-row flex items-center w-[40px] ">
+                        <div class="bannerRightContainer mt-5 md:mt-0 flex-row flex justify-between items-center w-[40px] ">
                             <div style="" class="btn text-1xl border  flex justify-center items-center mx-0 md:mx-3 cursor-pointer">
                                 Delivery
                             </div>
@@ -118,7 +118,7 @@ export default ({
     height: 70vh;
  }
  .btn {
-    width: 10rem;
+    width: 9rem;
     min-height: 3.5rem;
     border-radius: 0.5rem;
     background:#D70F64;

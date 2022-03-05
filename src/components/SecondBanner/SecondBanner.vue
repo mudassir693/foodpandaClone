@@ -4,7 +4,7 @@
             <div class="cardTop">
 
             
-            <div class="card bg-white  p-5">
+            <div class="absolute md:relative md:block card bg-white  p-5">
                 <div class="wrapper  m-3">
                 <div class="heading my-2 text-[#333333]">
                     {{heading}}
@@ -22,8 +22,8 @@
                 </div>
 
 
-                 <div class="btnContainer   text-right">
-                     <div class="hiddn my-5"> j</div>
+                 <div class="btnContainer md:text-right ">
+                     <div class="hiddn  md:my-5"> j</div>
                     <span class="btn text-white cursor-pointer">
                         Get started
                     </span>
@@ -99,5 +99,48 @@ export default {
 .container {
     height: 100%;
     position: relative;
+}
+
+@media screen and (max-width: 640px) {
+    .main {
+        max-height: 500px;
+        position: relative;
+        height: 35vh;
+        /* z-index: 999; */
+        /* background-image: url('../../assets/resturant.webp'); */
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-size: content;
+        margin-bottom:19rem;
+        /* transform: scale(1); */
+    }
+    .btn {
+        background: #D70F64;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        font-size: 1rem;
+         width: 100%;
+         height: 2.8rem;
+    }   
+    .btnContainer {
+        width: 100%;
+         height: 100%;
+    }
+    .card {
+            position: absolute;
+        top:80%;
+        left:50%;
+        width: 95%;
+        transform: translateX(-50%);
+        height: fit-content;
+    }
+    .heading {
+        font-size: 1.2rem;
+        font-weight: 200;
+    }
+    .peragraph {
+        font-size: .8rem;
+        font-weight: 100;
+    }
 }
 </style>
