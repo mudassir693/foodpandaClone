@@ -1,5 +1,5 @@
 <template >
-    <div class="main relative cursor-pointer my-2">
+    <div class="main mx-2 md:mx-0 relative cursor-pointer my-2">
         <img class="img" :src="img" alt="">
         <div class="header opacity-50 hidden ">{{CityName.charAt(0)}}</div>
         <div class="textContainer ">
