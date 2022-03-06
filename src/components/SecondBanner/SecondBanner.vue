@@ -10,14 +10,14 @@
                     {{heading}}
                 </div>
                 <div class="pera my-4">
-                    <div class="peragraph text-[#707070] my-3">
-                        Would you like millions of new customers to enjoy your amazing food and groceries? So would we!
+                    <div v-if="pera1" class="peragraph text-[#707070] my-3">
+                        {{pera1}}
                     </div>
-                    <div class="peragraph text-[#707070] my-3">
-                       It's simple: we list your menu and product lists online, help you process orders, pick them up, and deliver them to hungry pandas – in a heartbeat!
+                    <div v-if="pera2" class="peragraph text-[#707070] my-3">
+                       {{pera2}}
                     </div>
-                    <div class="peragraph text-[#707070] my-3">
-                       Interested? Let's start our partnership today!
+                    <div v-if="pera3" class="peragraph text-[#707070] my-3">
+                       {{pera3}}
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@
 </template>
 <script>
 export default {
-    props:['bgImage','heading']
+    props:['bgImage','heading','pera1','pera2','pera3']
     
 }
 </script>
@@ -64,9 +64,9 @@ export default {
     font-size: 1rem;
 }
 .btnContainer {
-    position: relative;
-        /* bottom: -5rem;
-        right: 0rem; */
+    position: absolute;
+        bottom: 2rem;
+        right: 0rem;
 }
 .hiddn {
     visibility: hidden;
@@ -123,8 +123,15 @@ export default {
          height: 2.8rem;
     }   
     .btnContainer {
+        position: relative;
+        bottom: 0;
         width: 100%;
          height: 100%;
+    }
+    .btnContainer {
+       /* position: relative; */
+        /* bottom: 2rem;
+        right: 0rem; */
     }
     .card {
             position: absolute;
