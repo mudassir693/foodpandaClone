@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div  class="mainn my-10 overflow-scroll md:my-0 md:mb-5 text-3xl max-w-7xl mx-auto flex justify-start items-center md:grid md:grid-cols-4 lg:grid lg:grid-cols-5">
+        <div  class="mainn my-10 overflow-scroll md:my-0 md:mb-5 text-3xl max-w-7xl mx-auto flex justify-start md:overflow-hidden items-center md:grid md:grid-cols-4 lg:grid lg:grid-cols-5">
             <div v-for="city in cityArray" :key="city.cityNam" class="flex justify-center items-between">
                 <CityCard :CityName="city.CityName" :img="city.Img" />
             </div>

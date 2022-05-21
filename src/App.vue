@@ -41,6 +41,7 @@ export default {
   font-family:  'Open Sans', sans-serif;
   /* overflow-x: hidden; */
   margin:0;
+  overflow-x:hidden;
   padding: 0;box-sizing: border-box;
 }
 </style>
