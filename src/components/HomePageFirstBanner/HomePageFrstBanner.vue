@@ -15,7 +15,7 @@
                             </label>
                         </div>
                         <div class="bannerRightContainer mt-5 md:mt-0 flex-row flex justify-between items-center w-[40px] ">
-                            <div style="" class="btn text-1xl border  flex justify-center items-center mx-0 md:mx-3 cursor-pointer">
+                            <div @click="openMapContainer" style="" class="btn text-1xl border  flex justify-center items-center mx-0 md:mx-3 cursor-pointer">
                                 Delivery
                             </div>
                             <div class="or hidden md:flex justify-center items-center">
@@ -36,8 +36,17 @@
 
 
 <script>
+import store from '@/store/index.js';
 
 export default ({
+    methods:{
+        openMapContainer: function(){
+       
+            
+            console.log('what is here going on: ',store.state.lon);
+            store.state.mapContainer = true
+        }
+    }
     
 })
 </script>

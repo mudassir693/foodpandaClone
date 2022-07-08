@@ -26,7 +26,7 @@ export default {
 <style scoped>
 .main {
     background-color: #E21B70;
-    opacity: 0.9
+    opacity: 0.95
 }
 .imageContainer {
     position: absolute;

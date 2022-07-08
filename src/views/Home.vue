@@ -1,5 +1,6 @@
 <template>
-  <div class="home">
+  <div class="home relative">
+    <MapComponent />
     <NavBar />
     <FirstBanner  />
     <BannerHeader class="hidden sm:hidden md:block" Header="Partners" Desc="You prepare the food, we handle the rest" />
@@ -18,7 +19,10 @@
 </template>
 
 <script>
+import store from '@/store/index.js';
 // @ is an alias to /src
+
+import MapComponent from '../components/MapComponent/MapComponent.vue'
 import NavBar from '../components/Header/Header.vue'
 import FirstBanner from '../components/HomePageFirstBanner/HomePageFrstBanner.vue'
 import BannerHeader from '../components/HeadingComponent/HeadingComponent.vue'
@@ -29,6 +33,7 @@ import AppDescBanner from '../components/AppHomeBanner/AppHomeBanner.vue'
 export default {
   name: "Home",
   components: {
+    MapComponent,
     NavBar,
     Footer,
     AppDescBanner,
@@ -37,6 +42,32 @@ export default {
     SecondBanner,
     Cities
   },
+
+  created(){
+    if (navigator.geolocation) {
+      const geolocFail=()=>{
+        console.log('navigator is going to fail')
+      }
+                console.log('navigator is OK: ',store.state.lat)
+                
+    var location_timeout = setTimeout("geolocFail()", 10000);
+
+            navigator.geolocation.getCurrentPosition(function(position) {
+                clearTimeout(location_timeout);
+                console.log('cordinates: ,',position.coords.latitude);
+                store.state.lat = position.coords.latitude;
+                store.state.lon = position.coords.longitude;
+
+                // geocodeLatLng(lat, lng);
+            }, function(error) {
+                console.log(error)
+                clearTimeout(location_timeout);
+                geolocFail();
+            });
+        } 
+
+  }
+
 };
 </script>
 
