@@ -17,7 +17,7 @@
                 <input class="w-full py-1 outline-none rounded-lg px-3" v-model="inputFeild" type="text" name="" id="">
                 <i @click="addressTyped" class="fa-solid fa-paper-plane cursor-pointer mr-3"></i>
             </div> -->
-            <div class="submitBtn mx-auto cursor-pointer my-1 py-2 rounded-lg flex justify-center items-center ">
+            <div  @click="closeModal" class="submitBtn mx-auto cursor-pointer my-1 py-2 rounded-lg flex justify-center items-center ">
                <span class="text-md font-bold "> Confirm </span>
             </div>
         </div>

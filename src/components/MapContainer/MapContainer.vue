@@ -58,10 +58,14 @@ export default {
         console.log(marker1);
 
         function onDragEnd() {
-            const lngLat = marker.getLngLat();
-            coordinates.style.display = 'block';
-            coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+            const lngLat = marker1.getLngLat();
+            console.log('marker moved:', lngLat)
+            store.state.lat = lngLat.lat
+            store.state.lon = lngLat.lng
+
         }
+
+        marker1.on('dragend', onDragEnd);
     },
 
       methods:{
