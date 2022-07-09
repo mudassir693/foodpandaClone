@@ -9,14 +9,15 @@
                 X
             </span>
         </div>
-        <div  class="w-full mapContainerr bg-red-500">
-            <MapContainer class="mapContainer" />
+        <div  class="w-full mapContainerr ">
+            <MapContainer @setPlace="setPlace" class="mapContainer" />
         </div>
         <div class=" py-5 w-full">
-            <!-- <div class="inputContainer border-2 rounded-lg border-gray-500 mx-auto py-1  flex justify-center items-center">
-                <input class="w-full py-1 outline-none rounded-lg px-3" v-model="inputFeild" type="text" name="" id="">
-                <i @click="addressTyped" class="fa-solid fa-paper-plane cursor-pointer mr-3"></i>
-            </div> -->
+            <div class="inputContainer mx-auto py-1  flex justify-center items-center">
+                {{placeName}}<i @click="addressTyped" class="fa-solid fa-paper-plane cursor-pointer ml-3 mr-3"></i>
+            </div>
+
+            
             <div  @click="closeModal" class="submitBtn mx-auto cursor-pointer my-1 py-2 rounded-lg flex justify-center items-center ">
                <span class="text-md font-bold "> Confirm </span>
             </div>
@@ -34,7 +35,8 @@ export default {
     },
     data(){
         return {
-            inputFeild:''
+            inputFeild:'',
+            placeName:''
         }
     },
     methods:{
@@ -43,6 +45,10 @@ export default {
         }, 
         closeModal(){
             store.state.mapContainer = false
+        },
+        setPlace(props){
+            console.log('props from: ',props)
+            this.placeName=props
         }
     }
 }
@@ -83,6 +89,24 @@ export default {
     color: #FFFFFF;
 
 }
+@media screen and (max-width: 1050px) {
+    .modal {
+        width: 70%;
+        height: fit-content;
+        margin: auto auto;
+        /* background:pink; */
+    }
+}
+@media screen and (max-width: 480px) {
+    .modal {
+        width: 90%;
+        height: fit-content;
+        margin: auto auto;
+        /* background:pink; */
+    }
+}
+
+
 
 
 </style>

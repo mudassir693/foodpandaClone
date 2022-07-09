@@ -1,5 +1,4 @@
 <template>
-
     <div id="map" class="relative">
     </div>
 </template>
@@ -7,6 +6,7 @@
 <script>
 import store from '@/store/index.js';
 import mapboxgl from 'mapbox-gl'; 
+import axios from 'axios'
 import 'mapbox-gl/dist/mapbox-gl.css'; 
 export default {
     data() {
@@ -14,8 +14,10 @@ export default {
       lat:store.state.lat,
       long:store.state.lon,
       accessToken:'pk.eyJ1IjoibXVoYW1tYWQtbXVkYXNzaXIiLCJhIjoiY2w1OWxlMnAxMGYwZjNjcDRzeWp5YnZtOSJ9.yovt1JF_3gAzGl2KAhK2qA',
+      placeName:""
     };
   },
+  props: ['setPlace'],
 
 
 
@@ -57,12 +59,16 @@ export default {
 
         console.log(marker1);
 
-        function onDragEnd() {
+        let onDragEnd= async ()=> {
             const lngLat = marker1.getLngLat();
             console.log('marker moved:', lngLat)
             store.state.lat = lngLat.lat
             store.state.lon = lngLat.lng
 
+            const resp = await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${lngLat.lng},${lngLat.lat}.json?access_token=pk.eyJ1IjoibXVoYW1tYWQtbXVkYXNzaXIiLCJhIjoiY2w1OWxlMnAxMGYwZjNjcDRzeWp5YnZtOSJ9.yovt1JF_3gAzGl2KAhK2qA`)
+            console.log('here is address: ', resp)
+            // this.setPlace(resp?.data.features[0].place_name)
+            this.$emit('setPlace',resp?.data.features[0].place_name );
         }
 
         marker1.on('dragend', onDragEnd);

@@ -1,5 +1,5 @@
 <template >
-    <div class="main flex  max-w-7xl mx-auto bg-white">
+    <div class="main flex  max-w-7xl mx-auto bg-white pt-10">
        <div @click="setActive('delivery')" :class="isActive=='delivery'?'active':''" class="eachCard cursor-pointer relative  flex justify-start p-5 items-end ">
            <div class="text text-xl  text-[#D70F64]">
                 Delivery
@@ -45,11 +45,11 @@ export default {
     .active {
         font-weight: 700;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        border-bottom: 4px solid #D70F64;
+        border-bottom: 2px solid #D70F64;
         /* background-color: lightgrey; */
     }
     .eachCard {
-        height: 5rem;
+        height: 3.5rem;
         width: 18rem !important;
         overflow: hidden;
         /* background-color:lightgrey; */
@@ -65,7 +65,7 @@ export default {
         width:100%;
         left: 0rem;
         bottom: 0rem;
-        height: 3px;
+        height: 1px;
         /* background-color:#D70F64 */
     }
 </style>
